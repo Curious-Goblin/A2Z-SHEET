@@ -1,0 +1,1 @@
+{"name":"Local: aggressiveCows","url":"/home/sourabh/Desktop/a2z-sheet/binary-search/aggressiveCows.cpp","tests":[{"id":1737112144840,"input":"1\n5 3\n1\n2\n8\n4\n9","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sourabh/Desktop/a2z-sheet/binary-search/aggressiveCows.cpp","group":"local","local":true}
