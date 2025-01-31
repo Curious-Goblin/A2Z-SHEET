@@ -1,0 +1,1 @@
+{"name":"Local: medianMatrix","url":"/home/sourabh/Desktop/a2z-sheet/binary-search/bs-on-2d-arrays/medianMatrix.cpp","tests":[{"id":1738320047407,"input":"3\n3\n1 3 5 \n2 6 9 \n3 6 9","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sourabh/Desktop/a2z-sheet/binary-search/bs-on-2d-arrays/medianMatrix.cpp","group":"local","local":true}
