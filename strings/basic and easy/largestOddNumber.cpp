@@ -5,22 +5,14 @@ using namespace std;
 
 string largestOddNumber(string num)
 {
-    int number = 0;
-    for (int i = 0; i < num.size(); i++)
+    for (int i = num.size() - 1; i >= 0; i--)
     {
         if ((num[i] - '0') % 2 != 0)
         {
-            if (number < (num[i] - '0'))
-            {
-                number = num[i] - '0';
-            }
+            return num.substr(0, i + 1);
         }
     }
-    if (number == 0)
-    {
-        return "";
-    }
-    return to_string(number);
+    return "";
 }
 
 int main()
@@ -28,6 +20,6 @@ int main()
     string s;
     cin >> s;
     string result = largestOddNumber(s);
-    cout<<result;
+    cout << result;
     return 0;
 }
