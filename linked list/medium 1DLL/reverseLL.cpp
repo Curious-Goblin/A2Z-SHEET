@@ -14,16 +14,16 @@ struct ListNode
 ListNode *reverseList(ListNode *head)
 {
     ListNode *current = head;
-    ListNode *temp = head;
-    while(temp){
-        if(current == head){
-            temp= current->next;
-            current = current->next;
-            current->next=nullptr;
-            continue;
-        }
-        temp = current->next;
+    ListNode *prev = nullptr;
+    ListNode *next = nullptr;
+    while (current)
+    {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
     }
+    return prev;
 }
 
 int main()
