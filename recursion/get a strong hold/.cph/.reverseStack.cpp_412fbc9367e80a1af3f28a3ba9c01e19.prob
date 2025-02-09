@@ -1,0 +1,1 @@
+{"name":"Local: reverseStack","url":"/home/sourabh/Desktop/a2z-sheet/recursion/get a strong hold/reverseStack.cpp","tests":[{"id":1739090661026,"input":"4\n4 3 2 1","output":"1 2 3 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sourabh/Desktop/a2z-sheet/recursion/get a strong hold/reverseStack.cpp","group":"local","local":true}

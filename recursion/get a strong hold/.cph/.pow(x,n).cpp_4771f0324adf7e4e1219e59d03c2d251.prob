@@ -1,0 +1,1 @@
+{"name":"Local: pow(x,n)","url":"/home/sourabh/Desktop/a2z-sheet/recursion/get a strong hold/pow(x,n).cpp","tests":[{"id":1739087149534,"input":"2.00000 -2","output":"0.25"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sourabh/Desktop/a2z-sheet/recursion/get a strong hold/pow(x,n).cpp","group":"local","local":true}
