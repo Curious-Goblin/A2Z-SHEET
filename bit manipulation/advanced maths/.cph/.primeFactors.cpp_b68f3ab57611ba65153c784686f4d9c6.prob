@@ -1,0 +1,1 @@
+{"name":"Local: primeFactors","url":"/home/sourabh/Desktop/a2z-sheet/bit manipulation/advanced maths/primeFactors.cpp","tests":[{"id":1739373461657,"input":"100","output":"2 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sourabh/Desktop/a2z-sheet/bit manipulation/advanced maths/primeFactors.cpp","group":"local","local":true}
