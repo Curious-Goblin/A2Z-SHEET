@@ -5,34 +5,45 @@ using namespace std;
 class MyStack
 {
 public:
-    queue<int> first,second;
+    queue<int> first, second;
     MyStack()
     {
-        while(!first.empty()) first.pop();
-        while(!second.empty()) second.pop();
     }
 
     void push(int x)
     {
-        first.push(x);
-        if(second.size()==1){
-            second.pop();
-            second.push(x);
-        }
         second.push(x);
+        while (!first.empty())
+        {
+            second.push(first.front());
+            first.pop();
+        }
+        swap(first, second);
+
+        // logic of implementing stack using only one queue
+        
+        // first.push(x);
+        // int size = first.size();
+        // for(int i=0;i<size-1;i++){
+        //     first.push(first.front());
+        //     first.pop();
+        // }
     }
 
     int pop()
     {
-        int a = second.front();
+        if (first.empty())
+            return -1;
+        int a = first.front();
         first.pop();
-        second.pop();
         return a;
     }
 
     int top()
     {
-        return second.front();
+        if (first.empty())
+            return -1;
+        return first.front();
     }
 
     bool empty()
