@@ -4,7 +4,10 @@ using namespace std;
 
 bool isPowerOfTwo(int n)
 {
+    // little optimal
     // vector<int> bits;
+    // bitset<4> binary(n);
+    // cout<<binary<<endl;
     // int temp = n, count = 0;
     // while (temp != 0)
     // {
@@ -20,15 +23,22 @@ bool isPowerOfTwo(int n)
     //     return true;
     // }
     // return false;
-    if(n==0){
-        return false;
-    }
-    double ans = log2(n);
-    if (ans == floor(ans))
-    {
-        return true;
-    }
-    return false;
+
+    // optimal approach
+
+    int ans = n & (n - 1);
+    return ans == 0 ? true : false;
+
+    // brute force
+    // if(n==0){
+    //     return false;
+    // }
+    // double ans = log2(n);
+    // if (ans == floor(ans))
+    // {
+    //     return true;
+    // }
+    // return false;
 }
 
 int main()
