@@ -31,7 +31,7 @@ struct Node
 //     return 0;
 // }
 
-// optimal approach
+// optimal approach because here the space complexity is constant
 
 int countNodesinLoop(Node *head)
 {

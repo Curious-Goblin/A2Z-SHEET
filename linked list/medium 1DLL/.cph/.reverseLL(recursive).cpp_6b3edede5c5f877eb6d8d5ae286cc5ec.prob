@@ -1,0 +1,1 @@
+{"name":"Local: reverseLL(recursive)","url":"/home/sourabh/Desktop/a2z-sheet/linked list/medium 1DLL/reverseLL(recursive).cpp","tests":[{"id":1744875129204,"input":"5\n1 2 3 4 5","output":"5 4 3 2 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sourabh/Desktop/a2z-sheet/linked list/medium 1DLL/reverseLL(recursive).cpp","group":"local","local":true}

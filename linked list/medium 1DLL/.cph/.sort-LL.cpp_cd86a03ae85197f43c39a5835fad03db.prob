@@ -1,0 +1,1 @@
+{"name":"Local: sort-LL","url":"/home/sourabh/Desktop/a2z-sheet/linked list/medium 1DLL/sort-LL.cpp","tests":[{"id":1744894305150,"input":"5 \n5 4 3 2 1","output":"1 2 3 4 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sourabh/Desktop/a2z-sheet/linked list/medium 1DLL/sort-LL.cpp","group":"local","local":true}
