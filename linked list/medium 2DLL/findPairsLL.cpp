@@ -39,7 +39,7 @@ public:
 //     return result;
 // }
 
-// two pointer method (optimal)
+// two pointer method (optimal) O(n/2)
 vector<pair<int, int>> findPairsWithGivenSum(Node *head, int target)
 {
     vector<pair<int, int>> result;

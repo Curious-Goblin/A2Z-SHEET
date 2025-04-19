@@ -15,6 +15,9 @@ public:
     }
 };
 
+// this approach will work total for Na + Nb iterations, total length of both the linked lists
+// and this will not get into an infinite loop because after iteration total length of ll they
+// will meet at the nullptr stage and the while loop will terminate.
 ListNode *getIntersectionNode(ListNode *headA, ListNode *headB)
 {
     ListNode *a = headA;
