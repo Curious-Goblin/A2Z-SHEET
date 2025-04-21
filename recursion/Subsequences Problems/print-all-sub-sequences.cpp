@@ -6,7 +6,8 @@ using namespace std;
 class Solution {
     public:
 
-    // time and space complexity = O(n * 2^n)
+    // time and space complexity = O(n * 2^n) here n is present because copying path to
+    // result takes atmost O(n) operations.
     void helper(vector<int> &path, vector<vector<int>> &result, int index, vector<int> &nums){
         if(index == nums.size()){
             result.push_back(path);
