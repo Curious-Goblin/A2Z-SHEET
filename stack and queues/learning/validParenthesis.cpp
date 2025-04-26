@@ -50,5 +50,7 @@ int main()
     string s;
     cin >> s;
     Solution solve;
-    cout << solve.isValid(s);
+    bool result = solve.isValid(s);
+    result == 1 ? cout<<"true" : cout<<"false";
+    return 0;
 }

@@ -12,22 +12,22 @@ public:
 
     void push(int x)
     {
-        second.push(x);
-        while (!first.empty())
-        {
-            second.push(first.front());
-            first.pop();
-        }
-        swap(first, second);
+        // second.push(x);
+        // while (!first.empty())
+        // {
+        //     second.push(first.front());
+        //     first.pop();
+        // }
+        // swap(first, second);
 
         // logic of implementing stack using only one queue
         
-        // first.push(x);
-        // int size = first.size();
-        // for(int i=0;i<size-1;i++){
-        //     first.push(first.front());
-        //     first.pop();
-        // }
+        first.push(x);
+        int size = first.size();
+        for(int i=0;i<size-1;i++){
+            first.push(first.front());
+            first.pop();
+        }
     }
 
     int pop()
