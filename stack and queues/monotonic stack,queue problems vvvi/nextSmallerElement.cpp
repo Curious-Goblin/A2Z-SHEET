@@ -2,7 +2,8 @@
 
 using namespace std;
 
-vector<int> nextGreaterElement(vector<int> &nums)
+// O(n)
+vector<int> nextSmallerElement(vector<int> &nums)
 {
     vector<int> result;
     stack<int> monotonic;
@@ -27,8 +28,8 @@ int main()
     {
         cin >> nums[i];
     }
-    vector<int> result = nextGreaterElement(nums);
-    for (int i = 0; i < result.size(); i++)
+    vector<int> result = nextSmallerElement(nums);
+    for (int i = result.size()-1; i >= 0; i--)
     {
         cout << result[i] << " ";
     }

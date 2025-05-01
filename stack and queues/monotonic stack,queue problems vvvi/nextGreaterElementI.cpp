@@ -62,12 +62,39 @@ public:
     //     return result;
     // }
 
+    // O(n+m)
     vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2)
     {
         vector<int> result;
         stack<int> monotonic;
         unordered_map<int, int> hash;
         for (int i = nums2.size() - 1; i >= 0; i--)
+        {
+            while (!monotonic.empty() && monotonic.top() <= nums2[i])
+            {
+                monotonic.pop();
+            }
+            if (monotonic.empty())
+            {
+                hash[nums2[i]] = -1;
+            }
+            else
+            {
+                hash[nums2[i]] = monotonic.top();
+            }
+            monotonic.push(nums2[i]);
+        }
+        for(int num:nums1){
+            result.push_back(hash[num]);
+        }
+        return result;
+    }
+    vector<int> nextGreaterElementLeft(vector<int> &nums1, vector<int> &nums2)
+    {
+        vector<int> result;
+        stack<int> monotonic;
+        unordered_map<int, int> hash;
+        for (int i=0;i<nums2.size();i++)
         {
             while (!monotonic.empty() && monotonic.top() <= nums2[i])
             {
@@ -104,7 +131,7 @@ int main()
         cin >> nums2[i];
     }
     Solution s;
-    result = s.nextGreaterElement(nums1, nums2);
+    result = s.nextGreaterElementLeft(nums1, nums2);
     for (int i = 0; i < result.size(); i++)
     {
         cout << result[i] << " ";

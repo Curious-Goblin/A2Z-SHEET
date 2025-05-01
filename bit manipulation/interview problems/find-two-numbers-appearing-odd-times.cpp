@@ -14,15 +14,15 @@ class Solution{
             xorAll ^= Arr[i];
         }
         bitset<64> binary(xorAll);
-        // long long int index=0;
-        // for(int i=0;i<64;i++){
-        //     if(binary[i]==1){
-        //         index = i;
-        //         break;
-        //     }
-        // }
-        // num = 1 << index;
-        num = xorAll & ~(xorAll - 1);
+        long long int index=0;
+        for(int i=0;i<64;i++){
+            if(binary[i]==1){
+                index = i;
+                break;
+            }
+        }
+        num = 1 << index;
+        // num = xorAll & ~(xorAll - 1);
         for(int i=0;i<N;i++)
         {
             if(Arr[i] & num)
