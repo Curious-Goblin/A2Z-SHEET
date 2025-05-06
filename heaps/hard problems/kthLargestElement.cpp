@@ -5,7 +5,7 @@ using namespace std;
 
 /*
 the question was to give the kth largest element so we create a minheap which is having the k largest
-element from the vector and then the top element will be the kth largerst element and thats the answer*/ 
+element from the vector and then the top element will be the kth largest element and thats the answer*/ 
 class KthLargest
 {
 public:
