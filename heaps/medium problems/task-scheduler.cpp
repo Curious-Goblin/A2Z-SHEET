@@ -4,7 +4,7 @@ using namespace std;
 
 class Solution{
     public:
-    // O(NlogK) ~ O(N) since k is constant(26)
+        // O(NlogK) ~ O(N) since k is constant(26)
         int leastInterval(vector<char>& tasks, int n) {
             vector<int> freq(26,0);
             for(char &ch: tasks){

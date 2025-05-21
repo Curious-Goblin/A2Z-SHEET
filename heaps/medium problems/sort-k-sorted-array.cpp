@@ -4,7 +4,7 @@ using namespace std;
 
 class Solution{
     public:
-    // the complexity if n*k and it is not optimal
+        // the complexity if n*k and it is not optimal
         // void nearlySorted(vector<int>& arr, int k) {
         //     for(int i=0;i<arr.size();i++){
         //         int a = 0;
