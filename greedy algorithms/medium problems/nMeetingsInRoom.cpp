@@ -19,7 +19,7 @@ public:
         }
         sort(meets.begin(), meets.end());
         meetEnd = meets[0].first;
-        for (int i = 0; i < meets.size(); i++)
+        for (int i = 1; i < meets.size(); i++)
         {
             if (meets[i].second > meetEnd)
             {
