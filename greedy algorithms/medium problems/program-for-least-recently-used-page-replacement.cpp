@@ -43,18 +43,21 @@ public:
 
     void add(int val)
     {
-        // Node *newNode = new Node(val);
-        // tail->next = newNode;
-        // newNode->prev = tail;
-        // cache.insert({val, newNode});
-        // // tail = tail->next;
-        // if (cache.size() > capacity)
-        // {
-        //     cache.erase(val);
-        //     remove(head->next);
-        // }
-        
+        Node *newNode = new Node(val);
+        newNode->next = tail;
+        newNode->prev = tail->prev;
+        tail->prev->next = newNode;
+        tail->prev = newNode;
+        cache[val] = newNode;
+
+        if (cache.size() > capacity)
+        {
+            Node *lru = head->next;
+            cache.erase(lru->data);
+            remove(lru);
+        }
     }
+
     void remove(Node *node)
     {
         Node *temp = node->prev;
