@@ -15,6 +15,9 @@ struct TreeNode
 class Solution
 {
 public:
+
+    // inefficient brute force soltuion with n^2 complexity
+
     // int maxDepth(TreeNode *root)
     // {
     //     if (root == nullptr)
@@ -38,6 +41,8 @@ public:
     //     return false;
     // }
 
+
+    // effficient with n complexity
     int maxDepth(TreeNode *root)
     {
         if (root == nullptr)

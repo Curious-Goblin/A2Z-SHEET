@@ -42,7 +42,7 @@ public:
         return postOrder;
     }
 
-    /* using one stack
+    // using one stack
     vector<int> postorderTraversal(TreeNode *root)
     {
         vector<int> postOrder;
@@ -84,7 +84,7 @@ public:
 
         return postOrder;
     }
-    */
+    
 };
 
 int main()
