@@ -13,7 +13,6 @@ class Solution{
     public:
     vector<int> topView(Node *root){
         if(root==nullptr) return {};
-        int hd=0;
         map<int, int> map;
         queue<pair<Node *, int>> qu;
         qu.push({root,0});
