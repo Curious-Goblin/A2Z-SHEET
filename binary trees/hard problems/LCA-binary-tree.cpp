@@ -8,12 +8,18 @@ struct TreeNode{
     TreeNode(int x) : val(x), left(nullptr), right(nullptr){}
 };
 
-class Solution{
+class Solution {
 public:
-    vector<string> binaryTreePaths(TreeNode* root) {
-        
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if(root == nullptr || root == p || root == q) return root;
+
+        TreeNode* left = lowestCommonAncestor(root->left, p, q);
+        TreeNode* right = lowestCommonAncestor(root->right, p, q);
+
+        if(left && right) return root;
+        return left ? left : right;
     }
-}
+};
 
 int main(){
     TreeNode *root = new TreeNode(1);
@@ -26,9 +32,7 @@ int main(){
     root->left->right->left = new TreeNode(8);
 
     Solution sol;
-    vector<string> result = sol.binaryTreePaths(root);
-    for(int i=0;i<result.size();i++){
-        cout<<result[i]<<endl;
-    }
+    TreeNode *result = sol.lowestCommonAncestor(root, root->left->right->left, root->left->left);
+    cout<<result->val<<endl;
     return 0;
 }
