@@ -18,17 +18,17 @@ class Solution{
         return result;
     }
     public:
-    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
-        vector<vector<int>> adlist = buildAdList(numCourses, prerequisites);
+    bool isCyclic(int V, vector<vector<int>>& edges) {
+        vector<vector<int>> adlist = buildAdList(V, edges);
         queue<int> qu;
-        vector<int> inDegree(numCourses, 0);
+        vector<int> inDegree(V, 0);
         vector<int> result;
-        for(int i=0;i<numCourses;i++){
+        for(int i=0;i<V;i++){
             for(int &neighbor:adlist[i]){
                 inDegree[neighbor]++;
             }
         }
-        for(int i=0;i<numCourses;i++){
+        for(int i=0;i<V;i++){
             if(inDegree[i]==0){
                 qu.push(i);
             }
@@ -44,9 +44,9 @@ class Solution{
                 }
             }
         }
-        if(result.size() < numCourses) return false;
+        if(result.size() < V) return true;
 
-        return true;
+        return false;
     }
 };
 
