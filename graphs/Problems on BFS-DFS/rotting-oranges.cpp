@@ -6,7 +6,7 @@ class Solution{
     public:
     int orangesRotting(vector<vector<int>>& grid){
         queue<pair<pair<int,int>,int>> qu;
-        int time=0,rows = grid.size(), column = grid[0].size();
+        int time=0, rows = grid.size(), column = grid[0].size();
         vector<vector<bool>> visited(rows, vector<bool>(column, false));
 
         for(int i=0;i<grid.size();i++){
