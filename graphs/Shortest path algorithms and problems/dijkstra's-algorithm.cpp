@@ -12,6 +12,7 @@ class Solution{
         }
         return result;
     }
+    // O((V+E)logV)
     vector<int> dijkstra(int V, vector<vector<int>> &edges, int src) { 
         vector<vector<pair<int,int>>> adlist = buildAdList(V, edges);
         priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;

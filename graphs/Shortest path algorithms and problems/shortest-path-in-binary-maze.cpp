@@ -39,7 +39,7 @@ class Solution{
     }
     int shortestPathBinaryMatrix(vector<vector<int>>& grid) {
         int n = grid.size();
-        if(grid[0][0]==1 || grid[n-1][n-1]) return -1;
+        if(grid[0][0] || grid[n-1][n-1]) return -1;
         vector<vector<bool>> visited(grid.size(), vector<bool>(grid.size(), false)); 
         vector<vector<int>> directions = {{-1,0},{1,0},{0,1},{0,-1},{1,1},{-1,-1},{-1,1},{1,-1}};
         queue<pair<int,int>> qu;
